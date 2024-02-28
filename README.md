@@ -1,4 +1,4 @@
-# A Simple Hello World Python Demo 
+# A Simple Hello World Python Demo
 
 Example used to demonstrate ```docker init``` CLI for a simple Hello World Python Program
 
@@ -14,8 +14,8 @@ You can simply use `python3 app.py` command.
 
 This code defines a handler that responds to GET requests with the specified text and starts an HTTP server listening on port 8080. When you run the script, you can access the server at http://localhost:8080 and see the same message as the Python program.
 
-Those commands will start a http server listening on port `8080` 
-and if your request `http://localhost:8080` you'll see the following output: 
+Those commands will start a http server listening on port `8080`
+and if your request `http://localhost:8080` you'll see the following output:
 ```shell
 ❯ curl http://localhost:8080
 
@@ -72,15 +72,15 @@ services:
       - "8080:8080"
     command: python3 app.py
  ```
- 
+
  ## Running the container service
- 
+
  ```
   docker compose up -d --build
  ```
- 
+
  ## Accessing the Python app
- 
+
  ```
  curl localhost:8080
 
