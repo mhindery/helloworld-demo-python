@@ -18,7 +18,7 @@ class MyHandler(BaseHTTPRequestHandler):
   \____\_______/
 
 
-Hello from Docker!
+Hello from Docker Mathieu!
 '''
         )
 
