@@ -1,0 +1,11 @@
+apiVersion: v2
+name: helloworld-demo-python-external
+description: helloworld-demo-python-external
+type: application
+version: 0.0.1
+
+# External chart managed by platform team?
+dependencies:
+- name: cp-microservice
+  version: "0.0.3"
+  repository: "https://mhindery.github.io/charts/"

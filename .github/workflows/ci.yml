@@ -112,3 +112,26 @@ jobs:
           user_email: 'mathieu.hinderyckx@gmail.com'
           user_name: 'mhindery'
           commit_message: 'helloworld-demo-python release version ${{ github.ref_name }}'
+
+  helm_deploy_external:
+    needs: [
+      docker
+    ]
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Render helm
+        run: bash ./script_external.sh
+      - name: Push to argo
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.GH_TOKEN }}
+        with:
+          source_file: 'server_config/helm/rendered/${{ github.ref_name }}'
+          destination_repo: 'mhindery/argo'
+          destination_folder: 'helloworld-demo-python-external'
+          user_email: 'mathieu.hinderyckx@gmail.com'
+          user_name: 'mhindery'
+          commit_message: 'helloworld-demo-python-external release version ${{ github.ref_name }}'

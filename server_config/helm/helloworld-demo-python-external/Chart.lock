@@ -1,0 +1,6 @@
+dependencies:
+- name: cp-microservice
+  repository: https://mhindery.github.io/charts/
+  version: 0.0.3
+digest: sha256:b233402b015ca2b044a0f86d019416b75cd0a0257b984fb421602c43feac6684
+generated: "2024-02-29T08:21:04.600962+01:00"
