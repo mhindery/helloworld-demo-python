@@ -31,7 +31,7 @@ It is best practice to have a separate repo for manifests and application code, 
 The demo setup is done using microk8s, which creates a local k8s cluster on your machine.
 
 Install microk8s according to the installation here: https://microk8s.io/#install-microk8s
-Install the argocd add-on: 
+Install the argocd add-on:
 
 ```shell
 microk8s enable argocd
@@ -101,7 +101,7 @@ argocd               argo-cd-argocd-dex-server                         ClusterIP
 argocd               argo-cd-argocd-repo-server                        ClusterIP   10.152.183.82    <none>        8081/TCP                 2d20h
 poc                  helloworld-demo-python                            ClusterIP   10.152.183.95    <none>        80/TCP                   19h
 poc                  helloworld-demo-python-external-cp-microservice   ClusterIP   10.152.183.238   <none>        80/TCP                   9s
-mhindery@MacBook-Pro-van-Mathieu ~ % 
+mhindery@MacBook-Pro-van-Mathieu ~ %
 ```
 
 Port-forward the service to a local port and you can access the app.
